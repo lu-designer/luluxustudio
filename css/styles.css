@@ -1,0 +1,583 @@
+
+body {
+  font-family: "Montserrat";
+  text-align: left;
+  
+
+}
+
+
+.circle-gray img {
+
+  filter: grayscale(0%);
+  filter: gray;
+  -webkit-filter: grayscale(0%);
+  filter: none;
+  transition: 0.2s ease; }
+  
+  .circle-gray img:hover {
+    
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-webkit-transition: all 0.2s ease;
+  }
+
+
+.circle-opacity img {
+
+  opacity:1;
+  transition: 0.5s ease;  }
+  
+  .circle-opacity img:hover {
+    opacity:0.7;
+    transition: 0.5s ease;
+  }
+
+
+  .circle img {
+
+    transition: 0.3s ease;
+    opacity:1;
+
+    }
+    
+    .circle img:hover {
+    border-radius:5%;
+    opacity:0.8;
+    transition: 0.3s ease;
+    }
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "open-sans"  "Ubuntu";
+}
+
+.landingPageText {
+  color: #8f8f8f;
+}
+
+p {
+  color: black;
+}
+
+/* Headings */
+
+.big-heading {
+  font-family: "Montserrat-Black";
+  /* font-size: 3.5rem; */
+  font-size: 60px;
+  line-height: 1.5;
+}
+
+.small-heading{
+  font-size: 24px;
+  color: #fff;
+
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+
+
+/* Containers */
+
+.container-fluid{
+  padding: 4% 8%;
+}
+
+
+.container-fluid-artworkdescription{
+  padding: 0 20%;
+}
+
+
+
+.container-fluid-landingpage{
+  padding: 4% 8%;
+
+
+}
+
+.container-fluid-navbar{
+
+  padding: 0 8% 0 8%;
+  
+}
+
+
+
+.container-fluid-footer{
+  padding: 3% 10%;
+}
+
+
+.container-fluid-bannerImg{
+  padding: 8% 25% 0 25%;
+}
+
+
+/* Sections */
+
+.colored-section {
+  background-color: #7B68EE;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  padding: 0.5rem 0;
+}
+
+
+
+
+.navbar-brand {
+  font-family:  "Ubuntu";
+  font-size: 3rem;
+  font-weight: bold;
+
+}
+
+
+
+.nav-item {
+  padding: 0 30px;
+
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-family: "open-sans"  "Ubuntu"  ;
+  color: #000000;
+
+}
+
+/* Buttons */
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Title Section */
+
+#title {
+  background-color:   #ffffff;
+  color: #000000;
+  text-align: left;
+}
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
+}
+
+
+/* about me */
+
+
+.AboutMeTitle{
+
+  text-align: left;
+  padding: 30px 0px;
+}
+
+
+
+#titleProject .container-fluid {
+  padding: 3% 15% 0;
+}
+
+#titleAboutMe {
+  color: #7B68EE;
+  text-align: left;
+}
+
+#titleAboutMe .container-fluid {
+  padding: 3% 15% 7%;
+}
+
+.title-image-aboutMe {
+  width: 100%;
+  position:static;
+  margin-left:  40px;
+
+  /* right: 30%; */
+}
+
+.logo-image {
+
+  width: 120px;
+  height: 120px;
+
+}
+
+.project-img-aboutMe{
+width: 40%;
+margin: 20 20 20 0px;
+/* padding-bottom: 40px; */
+}
+
+
+/* Illustration Content Pages */
+
+
+.illustration-img{
+  width: 80%;
+  margin: 20 20 20 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  }
+
+  .illustration-verticle-img{
+    width: 40%;
+    margin: 20 20 20 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    }
+
+
+  .IllustrationPageText {
+    color: #8f8f8f;
+    padding-bottom: 60px;
+  }
+
+  .backToIllustration{
+    text-align: right;
+    padding-bottom: 50px;
+
+  }
+
+  .nextPrevious{
+    text-align: right;
+  }
+
+
+/* Title Image */
+
+.title-image {
+  width: 80%;
+  transform: rotate(0deg);
+  /* position: relative; */
+  margin-left:  80px;
+
+  /* right: 30%; */
+}
+
+/* Features Section */
+
+#features {
+  position: relative;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 2%;
+}
+
+.project-img{
+width: 100%;
+height: 400px;
+width: 600px;
+margin: 5 5 0 0px;
+padding-bottom: 5px;
+}
+
+
+.project-img-tiger{
+  width: 100%;
+  height: 400px;
+  width: 550px;
+  margin: 5 5 0 0px;
+  padding-bottom: 5px;
+  }
+
+.project-img-vertical{
+  width: 100%;
+  height: 600px;
+  width: 400px;
+  margin: 10 10 0 0px;
+  padding-bottom: 10px;
+  }
+
+
+  
+
+/* .icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #ff4c68;
+} */
+
+
+/* Testimonial Section */
+
+#testimonials {
+  background-color:  #999;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  margin: 20px;
+}
+
+
+ #press {
+  background-color:  #999;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+} */
+
+/* Pricing Section */
+
+/* #pricing {
+  padding: 100px;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+} */
+
+/* CTA Section */
+
+
+/* Footer Section */
+#footer{
+
+  text-align: center;
+  padding: 2% 15%;
+
+}
+
+
+.copyright-text{
+
+  color: #FFFFFF;
+  text-align: right;
+
+}
+
+
+.email-text{
+
+  color: #FFFFFF;
+  text-align: left;
+  margin-left: 10px;
+
+}
+
+
+
+/* Project ONE */
+
+/* Project title */
+.projectOneTitle{
+
+  text-align: center;
+  padding: 40px 0px;
+}
+
+
+
+
+
+/* 4-col description */
+
+.description-box {
+  padding: 4.5% ;
+}
+
+
+.workshopDescription-box {
+  padding-right:  4.5% ;
+}
+
+
+h5 {
+  padding-top: 40px;
+
+padding-bottom: 30px;
+
+}
+
+h3 {
+
+padding-bottom: 40px;
+padding-top: 40px;
+}
+
+/* hr.dashed {
+  border-top: 3px dashed #bbb;
+} */
+
+.whiteHR{
+  border-top: 0.1px solid #bbb;
+}
+
+.whiteHR2{
+  border-top: 0.1px solid #bbb;
+  margin: 130px 0 0 0;
+}
+
+
+.darkHR{
+  border-top: 0.1px solid #fff;
+}
+
+.subtitle{
+  text-align: left;
+  font-size: 0.775em;
+color: #bbb;
+padding-top: 40px;
+
+}
+
+
+/* SERVICE DESIGN Section */
+
+.serviceDesign-img{
+  width: 100%;
+padding-top: 30px;
+
+padding-bottom: 30px;
+}
+
+
+.thedoor-img{
+  width: 100%;
+  padding: 40px;
+
+
+}
+
+
+.container-fluid-imgs{
+  padding: 0 5%;
+}
+
+
+/* UX design Section */
+.h5Heading{
+
+  padding: 3% 0;
+}
+
+.UXDesign-img{
+  width: 100%;
+padding-top: 50px;
+
+padding-bottom: 20px;
+
+}
+
+.imageAnnotation{
+  text-align: right;
+  padding-bottom: 50px;
+}
+
+
+/* project 1 */
+
+
+.doorGif{
+padding:3% 0 5% 0;
+
+}
+
+
+/* project 2 */
+
+.description-box-project2 {
+  padding: 0 4.5% 0 4.5%;
+}
+
+
+.container-fluid-project2{
+  padding: 0 15% 5% 15%;
+}
+
+
+
+/* project 4 */
+
+
+.p4-video{
+
+  display: block;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  /* padding: 30px; */
+}
+
+
+.p4-lantern-img{
+  width: 100%;
+margin: 40px 40px 40px 0;
+}
+
+
+
+  /* FOOTER */
+
+.LetsConnect{
+  color: #FFFFFF;
+
+}
+
+.social-icon {
+  margin: 10px 20px 20px 0;
+  color: #fff;
+  font-size:  x-large;
+}
+
+
+.social-icon-content {
+  margin: 10px 20px 20px 0;
+  color: #000000;
+  font-size:  x-large;
+}
+
+
+@media (max-width: 1028px) {
+
+  #title {
+    text-align: center;
+  }
+
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+
+
+
+}
