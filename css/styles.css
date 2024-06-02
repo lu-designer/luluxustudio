@@ -286,8 +286,6 @@ margin: 20 20 20 0px;
 
 .project-img{
 width: 100%;
-height: 400px;
-width: 600px;
 margin: 5 5 0 0px;
 padding-bottom: 5px;
 }
@@ -295,16 +293,12 @@ padding-bottom: 5px;
 
 .project-img-tiger{
   width: 100%;
-  height: 400px;
-  width: 550px;
   margin: 5 5 0 0px;
   padding-bottom: 5px;
   }
 
 .project-img-vertical{
   width: 100%;
-  height: 600px;
-  width: 400px;
   margin: 10 10 0 0px;
   padding-bottom: 10px;
   }
