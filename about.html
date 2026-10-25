@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Lulu Xu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Habibi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;600;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Font Awesome for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script defer src="script.js"></script>
+
+</head>
+
+<body>
+  
+
+  <!-- Navbar -->
+ <header class="navbar">
+    <div class="logo"><a href="intex.html"> Luluxu Studio</a></div> 
+
+<div class="logo"><a href="intex.html"> <img class="logo-image" src="images/logo.gif" alt="iphone-mockup"> </a></div> 
+
+
+<nav>
+    <ul class="navUl">
+      <li><a href="illustration.html">Illustration</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li><a href="contact.html">Contact</a></li>
+      <!-- OLD toggle button 
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+  <i class="fa-regular fa-moon"></i>-->
+
+  <button class="mode-toggle" id="mode-toggle" aria-label="Toggle light/dark mode">
+  <!-- Sun Icon (default for light mode) -->
+  <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"/>
+    <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+  </svg>
+
+  <!-- Moon Icon (hidden by default) -->
+  <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+    <path d="M21 12.79A9 9 0 0 1 12.21 3a7 7 0 1 0 8.79 9.79z"/>
+  </svg>
+</button>
+
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- Intro Section -->
+  <section class="about-intro reveal">
+ 
+
+    <div class="container">
+
+      <div class="portrait">
+        <img src="images/profile.webp" alt="Justin portrait placeholder">
+      </div>
+      <div class="intro-text">
+                          <h1>About Me</h1>
+
+   <p>
+    Lulu Xu is a Chinese Australian illustrator and interdisciplinary artist currently based in Wellington, New Zealand, with a passion for storytelling woven into every piece of her artwork. Her artistic journey began with a deep appreciation for nature and whimsical themes, which continue to inspire her creativities. She is also inspired by her travels in many countries in the past few years. 
+   </p>
+<p>
+She finds great joy in the tactile nature of art-making, using mediums like gouache, watercolour, coloured pencil, ink and more to bring her imaginations to life. In addition to traditional art, she's fascinated by immersive and interactive technologies like AR and VR. In one of her projects <a href="https://www.youtube.com/watch?v=BpVoTe0BqHs&t=157s" target="_blank" ><span style="text-decoration: underline;"><em>The Door</em></span></a>, Lulu blended tactile art-making with immersive technologies, exploring ways of storytelling that are noval and captivating.
+</p>
+
+<p>
+  Outside of art, you can often find Lulu hiking through nature trails and exploring new destinations. She also hosts a YouTube Channel where she shares insights into her creative process, and experiments with new creative ideas.
+</p>
+
+</div>
+    </div>
+
+
+  </section>
+
+
+ 
+
+<!-- CTA -->
+  <section class="cta " id="contact">
+    <h2>Contact me</h2>
+    <p class="cta-description">Get in touch for custom paintings, illustration projects or just say hi!</p>
+            <p class="cta-description">&#128231;luluxustudio@gmail.com</p>
+
+    <a href="contact.html" class="btn secondary2">Contact Me</a>
+  </section>
+
+
+  
+
+    <!-- Footer -->
+  <footer>
+    <nav class="footer-nav navUl">
+      <a href="illustration.html">Illustration</a>
+      <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+    </nav>
+
+      <hr class="footer-divider">
+
+           <div class="social-icons">
+     
+        <a href="https://www.instagram.com/noted_bylulu/" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+          <a href="https://www.youtube.com/@luluxustudio" target="_blank" aria-label="Youtube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+
+  <p>© 2026 Luluxu Studio. All rights reserved. </p>
+    
+  </footer>
+
+
+
+<!-- Custom Cursor 
+<div class="custom-cursor"></div>-->
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const buttons = document.querySelectorAll(".service-titles button");
+  const texts = document.querySelectorAll(".service-text");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Remove active from all
+      buttons.forEach(b => b.classList.remove("active"));
+      texts.forEach(t => t.classList.remove("active"));
+
+      // Add active to clicked
+      button.classList.add("active");
+      const target = button.getAttribute("data-target");
+      document.getElementById(target).classList.add("active");
+    });
+  });
+});
+
+
+
+
+const toggleButton = document.getElementById('mode-toggle');
+const sunIcon = document.getElementById('sun-icon');
+const moonIcon = document.getElementById('moon-icon');
+const body = document.body;
+
+// check saved mode
+if (localStorage.getItem('theme') === 'dark') {
+  body.classList.add('dark-mode');
+  sunIcon.style.display = 'none';
+  moonIcon.style.display = 'block';
+}
+
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  
+  const isDark = body.classList.contains('dark-mode');
+  if (isDark) {
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'block';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    sunIcon.style.display = 'block';
+    moonIcon.style.display = 'none';
+    localStorage.setItem('theme', 'light');
+  }
+});
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
