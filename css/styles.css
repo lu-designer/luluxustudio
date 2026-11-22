@@ -132,7 +132,7 @@ body.dark-mode {
 
 /* ====== GLOBAL STYLES ====== */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Lora-Regular", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.4s, color 0.4s;
@@ -260,7 +260,7 @@ p {
 }
 
 h2 {
-  font-family: "DM Serif Display", sans-serif;
+  font-family: 'Lora-Medium', "DM Serif Display", sans-serif;
   font-weight: 500;
   letter-spacing: 0.5px;
 
@@ -302,6 +302,56 @@ h2 {
 }
 
 /* Fonts */
+
+@font-face {
+  font-family: 'Lora-Regular';
+  src: url('../fonts/Lora-Regular.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora-Medium';
+  src: url('../fonts/Lora-Medium.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+   font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'IBMPlexMono-Regular';
+  src: url('../fonts/IBMPlexMono-Regular.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+   font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'IBMPlexMono-Medium';
+  src: url('../fonts/IBMPlexMono-Medium.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+   font-display: swap;
+}
+
+
+
+
+@font-face {
+  font-family: 'MADEBarista';
+  src: url('../fonts/MADE Barista.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+   font-display: swap;
+}
+
+
+
+
 @font-face {
   font-family: 'Aesthetic';
   src: url('../fonts/AestheticRegular.otf') format('opentype');
@@ -309,6 +359,8 @@ h2 {
   font-style: normal;
    font-display: swap;
 }
+
+
 
 
 @font-face {
@@ -468,7 +520,7 @@ header {
 
 
 .logo {
-  font-family:  'Equilla', sans-serif;
+  font-family: 'Equilla', sans-serif;
   font-weight: 600;
   font-size: 1.6rem;
   font-weight: 700;
@@ -482,6 +534,7 @@ header {
 }
 
 .navbar ul {
+    font-family: "Lora-Regular", "DM Serif Display", serif;
   display: flex;
   align-items: center;   /* ✅ keeps text links aligned to middle */
   list-style: none;
@@ -503,22 +556,120 @@ header {
   position: relative;
   overflow: hidden;
 
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   /* --- HERO Animation --- */
+}
+
+
+/* --- HERO Animation --- */
+.hero {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1.2s ease, transform 1.2s ease;
   will-change: opacity, transform;
 }
 
+.hero.hero-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.animate {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 {
+  transition-delay: 0.2s;
+}
+
+.delay-2 {
+  transition-delay: 0.4s;
+}
+
+
+/* Make the main hero heading slightly slower and stronger */
+h1.fade-up {
+  transition-duration: 1s;
+  letter-spacing: 1px;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+
+/* 🌲 Hero Parallax */
+.hero.parallax {
+  position: relative;
+  background-image: url("../images/hero.webp"); /* Replace with your actual hero image */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+ /*  background: rgba(0, 0, 0, 0.45); */
+  z-index: 0;
+}
+
+
+.hero h1 {
+  font-family: "Grenze Gotisch", "Sora", serif;
+  font-size: 4rem;
+  white-space: nowrap;
+  
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1; /* keep above overlay */
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #D8DDD7;
+  position: relative;
+  z-index: 1;
+}
 
 
 
 
+
+
+
+
+
+/* --- 
 .hero-content {
   position: relative;
   z-index: 2;
@@ -528,7 +679,7 @@ header {
 
 h1,
 .hero-content h1 {
-  font-family: "Equilla", serif;
+  font-family: "Lora-Medium", serif;
   font-weight: 600;
   font-size: 100px;
   line-height: 1.15;
@@ -541,8 +692,7 @@ h1,
   font-size: 1.25rem;
   max-width: 700px;
   margin: 0 auto 2rem auto;
-  /*color: #2A260A;
-  position: relative;*/
+
   z-index: 1;
   line-height: auto;
 }
@@ -572,36 +722,7 @@ h1.fade-up {
   font-size: 48px;
   line-height: 1.3;
 }
-
-/* 🌲 Hero Parallax 
-.hero.parallax {
-  position: relative;
-  background-color: #DED7DF;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #2A260A;
-  overflow: hidden;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}*/
-
+--- */
 
 
 /* --- Button --- */
@@ -639,11 +760,11 @@ h1.fade-up {
 /* ✅ Secondary (Hollow) Button */
 .btn.secondary {
   background-color: transparent;
-  color: #2A260A;
-  border: 1.5px solid #2A260A; /* yellow border */
+  color:var(--about-link-hover);
+  border: 1.5px solid var(--about-link-hover); /* yellow border */
   font-weight: 600;
   padding: 0.9rem 1.8rem;
-  border-radius: 8px;
+  border-radius: 100px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -651,7 +772,7 @@ h1.fade-up {
 
 /* Hover Effect */
 .btn.secondary:hover {
-  background-color: #2A260A;
+  background-color: var(--button-bg);
   color: #F5F5F5;
 }
 
@@ -659,14 +780,18 @@ h1.fade-up {
 .btn.secondary2 {
   background: var(--btn-secondary2-bg);
   color: var(--btn-secondary2-text);
-
+  font-weight: 600;
+  padding: 0.9rem 1.8rem;
+  border-radius: 100px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 /* Hover Effect */
 .btn.secondary2:hover {
   background-color: var(--btn-secondary2-hover-bg);
   color: var(--btn-secondary2-hover-text);
-  transform: translateY(-0.5px);  
 }
 
 
@@ -977,7 +1102,7 @@ h1.fade-up {
   padding: 4rem ;
 }
 .cta h2 {
-  font-family: "Equilla", sans-serif;
+  font-family: "Lora-Medium", sans-serif;
     color: var(--cta-text);
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -1264,6 +1389,28 @@ justify-content: center;
 }
 
 
+.project-grid-filter-threeItem-for-business {
+
+      padding-top: 8rem;
+
+  display: grid;
+ grid-template-columns: repeat(3, 1fr); /* ✅ 2 projects per row */
+  gap: 0.5rem; /* adjust space between cards */
+}
+
+
+.project-grid-filter-fourItem-for-business {
+
+      padding-top: auto;
+
+  display: grid;
+ grid-template-columns: repeat(4, 1fr); /* ✅ 2 projects per row */
+  gap: 0.5rem; /* adjust space between cards */
+}
+
+
+
+
 .row{
 
    padding-top: 8rem;
@@ -1365,7 +1512,7 @@ color: #8a8a76;
 }
 
 .about-intro h1 {
-  font-size:3rem;
+  font-size:2.5rem;
   line-height: 1.2;
   color: var(--about-text);
   margin-bottom: 1.2rem;
@@ -1856,7 +2003,49 @@ padding: 5rem 0;
 }
 
 
-/* About Page - Photo Gallery */
+/* SHOP PAGE */
+
+
+ .product-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-top: 0.9rem;
+    }
+    .product-name {
+      font-family: "Lora-Regular", serif;
+      font-weight: 400;
+      font-size: 1.15rem;
+      line-height: 1.25;
+      color: var(--text-color);
+    }
+    .product-price {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      color: var(--text-color);
+      opacity: 0.75;
+    }
+    .buy-btn {
+      background-color: #fed183;
+      color: #1F2933;
+      flex-shrink: 0;
+      font: inherit;
+      font-weight: 600;
+      padding: 0.55rem 1.6rem;
+      border-radius: 100px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+    .buy-btn:focus-visible {
+      outline: 2px solid var(--link-hover);
+      outline-offset: 3px;
+    }
+
+
+
+
+
+/* ABOUT PAGE - Photo Gallery */
 
 .gallery-tilt {
   display: flex;
@@ -2476,6 +2665,8 @@ padding-top: 0;
    =============================== */
 @media (max-width: 768px) {
 
+
+
   /* Navbar */
   .navbar {
     padding: 0.6rem 1rem;
@@ -2930,7 +3121,22 @@ padding-bottom: 0;
   grid-template-columns: 1fr; 
 }
 
+.project-grid-filter-threeItem-for-business {
 
+      padding-top: 8rem;
+
+  display: grid;
+  grid-template-columns: 1fr; 
+
+}
+
+.project-grid-filter-fourItem-for-business {
+
+      padding-top: auto;
+
+  display: grid;
+  grid-template-columns: 1fr; 
+}
 
 
 .filter-menu {
