@@ -2664,12 +2664,12 @@ padding-top: 0;
    📱 RESPONSIVE DESIGN (≤768px)
    =============================== */
 @media (max-width: 768px) {
-
+  
+/*
 .hero.parallax {
   position: relative;
-  background-image: url("../images/hero-mobile.webp"); /* Replace with your actual hero image */
- 
-}
+  background-image: url("../images/hero-mobile.webp");  
+}*/
 
 
 
