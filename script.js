@@ -1,15 +1,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-/*** 🌄 Parallax Scroll Effect ***/
+/*** 🌄 Parallax Scroll Effect (desktop only) ***/
 window.addEventListener('scroll', () => {
   document.querySelectorAll('.parallax').forEach(el => {
+    if (window.innerWidth <= 768) {
+      el.style.backgroundPosition = '';   // reset to the CSS value
+      return;
+    }
     const speed = el.dataset.speed || 0.5;
     const yPos = -(window.scrollY * speed);
     el.style.backgroundPosition = `center ${yPos}px`;
   });
 });
-
 
 
  /*** 🎞️ Horizontal Storytelling Scroll — Stable Version ***/
@@ -75,7 +78,26 @@ if (storytelling && scrollContainer && track) {
 
 
 
+/*** 🧭 Hide navbar on scroll down, show on scroll up ***/
+const navbar = document.querySelector('.navbar');
+let lastScrollY = window.scrollY;
 
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    const currentY = Math.max(window.scrollY, 0); // avoids iOS bounce glitch
+    const diff = currentY - lastScrollY;
+
+    if (currentY < 80) {
+      navbar.classList.remove('nav-hidden');   // always show near the top
+    } else if (diff > 5) {
+      navbar.classList.add('nav-hidden');      // scrolling down
+    } else if (diff < -5) {
+      navbar.classList.remove('nav-hidden');   // scrolling up
+    }
+
+    lastScrollY = currentY;
+  }, { passive: true });
+}
     
     
 
