@@ -2728,7 +2728,11 @@ padding-top: 0;
     padding-bottom: 0;
   }
 
-
+/* change hero image for mobile */
+.hero.parallax {
+  background-image: url("../images/hero0.webp"); /* Replace with your actual hero image */
+}
+  
   
 
   h1,
