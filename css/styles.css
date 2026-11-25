@@ -504,13 +504,15 @@ a:hover {
   padding: 0.5rem 4rem;
   backdrop-filter: blur(6px);      /* ✅ optional glassy feel */
   z-index: 1000;                 /* ✅ ensure it's above all sections */
-  transition: background 0.3s ease;
-
+transition: background 0.3s ease, transform 0.35s ease;
     background-color: var(--nav-bg);
   box-shadow: 0 1px 1px 0 rgba(31, 41, 51, 0.06);
 
 }
 
+.navbar.nav-hidden {
+  transform: translateY(-100%);
+}
 
 
 header {
@@ -2686,20 +2688,21 @@ padding-top: 0;
     text-align: center;
   font-weight: 800;
       scale: 1.5 !important;
-
   }
 
+  .logo img {
+  height:45px;   
+  width: auto;
+}
 
 
   .navbar ul {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
-
   }
 
   .mode-toggle {
- 
   width: auto;
   height: auto;
       padding: 4px; /* keeps circular breathing room */
@@ -2724,6 +2727,9 @@ padding-top: 0;
     background-attachment: scroll;
     padding-bottom: 0;
   }
+
+
+  
 
   h1,
   .hero-content h1 {
@@ -2908,6 +2914,8 @@ display:none;
     margin: 1rem ;
   }
 
+
+  
   /* Logos */
   .logo-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -3050,14 +3058,19 @@ align-items: center;
 
 
     /* project Page */
+
+    
+
 .project-overview{
   margin-top: 10rem;
     padding: 0 2rem 1rem 2rem;
-
 }
+
+
 .project-grid{
   margin-bottom: 2rem;
 }
+
 
 .project img {
   width: 100%;
@@ -3079,6 +3092,17 @@ align-items: center;
     flex-direction: column; /* stack items vertically */
     gap: 0;
 }
+
+/* Work / Portfolio pages: let artwork use the full phone width */
+.container-artwork {
+  padding: 0;
+}
+
+.project-card {
+  padding: 0 0 1rem 0;   /* no side padding, keep a gap below each image */
+}
+
+
 
 .full-width-image img {
   margin-bottom : 2rem  ;
@@ -3120,6 +3144,7 @@ padding-bottom: 0;
   display: grid;
   grid-template-columns: 1fr; 
 }
+
 
 .project-grid-filter-threeItem {
   margin-top: auto;
